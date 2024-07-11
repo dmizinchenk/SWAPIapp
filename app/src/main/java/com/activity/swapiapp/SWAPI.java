@@ -4,13 +4,14 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.Query;
+import retrofit2.http.Url;
 
 public interface SWAPI {
 //    @Headers("Accept: application/json")
-    @GET("people")
-    Call<StarWarsInfo> getModel();
+    @GET
+    Call<StarWarsInfo> getModel(@Url String url);
 
-    @GET("people")
+    @GET
     Call<StarWarsInfo> getModel(@Query("page") int page);
 
 
